@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[RAJEEV RANJAN SINGH] | Portfolio</title>
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --gray:#64748b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:var(--light);
+    color:var(--dark);
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    padding:15px 0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+section{
+    padding:100px 10%;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to right,#2563eb,#1e3a8a);
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero h2{
+    margin-top:10px;
+    font-weight:400;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 25px;
+    background:white;
+    color:#1e3a8a;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.about, .skills, .experience, .projects, .education, .contact{
+    max-width:1100px;
+    margin:auto;
+}
+
+h2.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--primary);
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    text-align:center;
+}
+
+.timeline{
+    position:relative;
+    margin-left:20px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:0;
+    width:3px;
+    height:100%;
+    background:var(--primary);
+}
+
+.timeline-item{
+    margin-bottom:30px;
+    padding-left:20px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-9px;
+    top:5px;
+    width:15px;
+    height:15px;
+    background:var(--primary);
+    border-radius:50%;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.contact a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.fade-in{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>[RAJEEV RANJAN SINGH]</h1>
+<h2>[ASSISTANT TEACHER]</h2>
+<p>Dedicated educator passionate about academic excellence, student development, and innovative teaching methodologies.</p>
+<a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<section id="about" class="about fade-in">
+<h2 class="section-title">About Me</h2>
+<p>I am an experienced and dedicated educator committed to empowering students with strong conceptual understanding and practical knowledge. I specialize in creating engaging learning environments and fostering academic growth.</p>
+</section>
+
+<section id="skills" class="skills fade-in">
+<h2 class="section-title">Skills</h2>
+<div class="skills-grid">
+<div class="skill">Teaching</div>
+<div class="skill">Curriculum Planning</div>
+<div class="skill">Classroom Management</div>
+<div class="skill">Communication</div>
+<div class="skill">Leadership</div>
+<div class="skill">Technology Integration</div>
+</div>
+</section>
+
+<section id="experience" class="experience fade-in">
+<h2 class="section-title">Work Experience</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h3>Assistant Teacher</h3>
+<p>School Name | 2020 - Present</p>
+<p>Responsible for lesson planning, student mentoring, and academic performance improvement.</p>
+</div>
+<div class="timeline-item">
+<h3>Coaching Instructor</h3>
+<p>Coaching Institute | 2018 - 2020</p>
+<p>Prepared students for board examinations with excellent academic results.</p>
+</div>
+</div>
+</section>
+
+<section id="projects" class="projects fade-in">
+<h2 class="section-title">Projects</h2>
+<div class="projects-grid">
+<div class="card">
+<h3>Project Title 1</h3>
+<p>Short description of the project highlighting achievements and outcomes.</p>
+</div>
+<div class="card">
+<h3>Project Title 2</h3>
+<p>Short description of the project highlighting achievements and outcomes.</p>
+</div>
+<div class="card">
+<h3>Project Title 3</h3>
+<p>Short description of the project highlighting achievements and outcomes.</p>
+</div>
+</div>
+</section>
+
+<section id="education" class="education fade-in">
+<h2 class="section-title">Education</h2>
+<p><strong>Degree Name</strong> – University Name – Year</p>
+<p><strong>Certification</strong> – Institution – Year</p>
+</section>
+
+<section id="contact" class="contact fade-in">
+<h2 class="section-title">Contact</h2>
+<p>Email: <a href="mailto:[rajeevripm@gmail.com]">[rajeevripm@gmail.com]</a></p>
+<p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+<p>Twitter: <a href="#">Twitter Profile</a></p>
+</section>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+entries.forEach(entry => {
+if(!entry.isIntersecting){
+return;
+}else{
+entry.target.classList.add('visible');
+appearOnScroll.unobserve(entry.target);
+}
+});
+}, appearOptions);
+
+faders.forEach(fader => {
+appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+  </html>
